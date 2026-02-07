@@ -164,9 +164,98 @@ new_actor["name"] = "Anne Hathaway"
 new_actor.save
 
 new_role = Role.new
-new_role["movie_id"] = "Michael Caine"
-new_role["actor_id"]
+new_role["movie_id"] = 1
+new_role["actor_id"] = 1
+new_role["character_name"] = "Bruce Wayne"
 new_role.save
+
+new_role = Role.new
+new_role["movie_id"] = 1
+new_role["actor_id"] = 2
+new_role["character_name"] = "Alfred"
+new_role.save
+
+new_role = Role.new
+new_role["movie_id"] = 1
+new_role["actor_id"] = 3
+new_role["character_name"] = "Ra's Al Ghul"
+new_role.save
+
+new_role = Role.new
+new_role["movie_id"] = 1
+new_role["actor_id"] = 4
+new_role["character_name"] = "Rachel Dawes"
+new_role.save
+
+new_role = Role.new
+new_role["movie_id"] = 1
+new_role["actor_id"] = 5
+new_role["character_name"] = "Commission Gordon"
+new_role.save
+
+new_role = Role.new
+new_role["movie_id"] = 2
+new_role["actor_id"] = 1
+new_role["character_name"] = "Bruce Wayne"
+new_role.save
+
+new_role = Role.new
+new_role["movie_id"] = 2
+new_role["actor_id"] = 6
+new_role["character_name"] = "Joker"
+new_role.save
+
+new_role = Role.new
+new_role["movie_id"] = 2
+new_role["actor_id"] = 7
+new_role["character_name"] = "Harvey Dent"
+new_role.save
+
+new_role = Role.new
+new_role["movie_id"] = 2
+new_role["actor_id"] = 2
+new_role["character_name"] = "Alfred"
+new_role.save
+
+new_role = Role.new
+new_role["movie_id"] = 2
+new_role["actor_id"] = 8
+new_role["character_name"] = "Rachel Dawes"
+new_role.save
+
+new_role = Role.new
+new_role["movie_id"] = 3
+new_role["actor_id"] = 1
+new_role["character_name"] = "Bruce Wayne"
+new_role.save
+
+new_role = Role.new
+new_role["movie_id"] = 3
+new_role["actor_id"] = 5
+new_role["character_name"] = "Commissioner Gordon"
+new_role.save
+
+new_role = Role.new
+new_role["movie_id"] = 3
+new_role["actor_id"] = 9
+new_role["character_name"] = "bane"
+new_role.save
+
+new_role = Role.new
+new_role["movie_id"] = 3
+new_role["actor_id"] = 10
+new_role["character_name"] = "John Blake"
+new_role.save
+
+new_role = Role.new
+new_role["movie_id"] = 3
+new_role["actor_id"] = 11
+new_role["character_name"] = "Selina Kyle"
+new_role.save
+
+new_agent = Agent.new
+new_agent["name"] = "Ari Emanuel"
+new_agent.save
 
 # Prints a header for the movies output
 puts "Movies"
