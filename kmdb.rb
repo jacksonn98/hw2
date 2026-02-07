@@ -257,6 +257,9 @@ new_agent = Agent.new
 new_agent["name"] = "Ari Emanuel"
 new_agent.save
 
+puts "There are #{Actor.all.count} actors"
+
+
 # Prints a header for the movies output
 puts "Movies"
 puts "======"
