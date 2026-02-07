@@ -79,12 +79,26 @@
 # Use `Model.destroy_all` code.
 # TODO!
 
+Studio.destroy_all
+Movie.destroy_all
+Actor.destroy_all
+Role.destroy_all
+Agent.destroy_all
+
 # Generate models and tables, according to the domain model.
 # TODO!
 
 # Insert data into the database that reflects the sample data shown above.
 # Do not use hard-coded foreign key IDs.
 # TODO!
+
+# Insert a row
+# new_company = Company.new
+# new_company["name"] = "Apple"
+# new_company["city"] = "Cupertino"
+# new_company["state"] = "CA"
+# new_company["url"] = "https://www.apple.com"
+# new_company.save
 
 # Prints a header for the movies output
 puts "Movies"
