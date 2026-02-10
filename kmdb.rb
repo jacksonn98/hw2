@@ -285,24 +285,23 @@ puts ""
 # Query the movies data and loop through the results to display the movies output.
 # TODO!
 
-# movies = Movies.where({"studio_id" => warner["id"]})
+movies = Movie.where({"studio_id" => warner["id"]})
 
-# for movie in movies
-#   # query to find the studio for this movie
-#   studio = Studio.find_by({"id" => movie["studio_id"]})
+for movie in movies
+  # query to find the studio for this movie
+  studio = Studio.find_by({"id" => movie["studio_id"]})
   
-#   # read the studio name from the studio row
-#   studio_name = studio["name"]
+  # read the studio name from the studio row
+  studio_name = studio["name"]
 
-#   # read the title, year_released, and rating from the movie row
-#   title = movie["title"]
-#   year_released = movie["year_released"]
-#   rating = movie["rated"]
+  # read the title, year_released, and rating from the movie row
+  title = movie["title"]
+  year_released = movie["year_released"]
+  rating = movie["rated"]
   
-
-#   # display a string with the contact's full name and note
-#   puts "#{title} #{rating} (#{year_released}) - #{studio_name}"
-# end
+  # display a string with the information
+  puts "#{title} - #{rating} - #{year_released} - #{studio_name}"
+end
 
 # Prints a header for the cast output
 puts ""
@@ -312,6 +311,28 @@ puts ""
 
 # Query the cast data and loop through the results to display the cast output for each movie.
 # TODO!
+
+roles = Role.all
+
+for role in roles
+  # query to find the movie title for this movie
+  movie = Movie.find_by({"id" => role["movie_id"]})
+
+  # read the title from the movie row
+  title = movie["title"]
+
+  # query to find the actor name for this role
+  actor = Actor.find_by({"id" => role["actor_id"]})
+  
+  # read the actor name from the actor row
+  actor_name = actor["name"]
+
+  # read the character name
+  character_name = role["character_name"]
+  
+  # display a string with the information
+  puts "#{title} - #{actor_name} - #{character_name}"
+end
 
 # Prints a header for the agent's list of represented actors output
 puts ""
