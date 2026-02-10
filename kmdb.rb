@@ -346,7 +346,7 @@ puts ""
 aris_actors = Actor.where({"agent_id" => ari["id"]})
 
 for actor in aris_actors
-  # read the studio name from the studio row
+  # read the actor name from the actor row
   actor_name = actor["name"]
   
   # display a string with the information
