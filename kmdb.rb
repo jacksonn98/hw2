@@ -340,9 +340,16 @@ puts "Represented by agent"
 puts "===================="
 puts ""
 
-
 # Query the actor data and loop through the results to display the agent's list of represented actors output.
 # TODO!
 
-# actor = Actor.find_by({"agent_id" => ari["id"]})
-# puts actor["name"]
+aris_actors = Actor.where({"agent_id" => ari["id"]})
+
+for actor in aris_actors
+  # read the studio name from the studio row
+  actor_name = actor["name"]
+  
+  # display a string with the information
+  puts "#{actor_name}"
+end
+
