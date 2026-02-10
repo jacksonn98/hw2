@@ -120,9 +120,9 @@ new_movie["rated"] = "PG-13"
 new_movie["studio_id"] = warner["id"]
 new_movie.save
 
-begins = Movie.find_by({"name" => "Batman Begins"})
-dark_knight = Movie.find_by({"name" => "The Dark Knight"})
-rises = Movie.find_by({"name" => "The Dark Knight Rises"})
+begins = Movie.find_by({"title" => "Batman Begins"})
+dark_knight = Movie.find_by({"title" => "The Dark Knight"})
+rises = Movie.find_by({"title" => "The Dark Knight Rises"})
 
 new_agent = Agent.new
 new_agent["name"] = "Ari Emanuel"
@@ -285,6 +285,25 @@ puts ""
 # Query the movies data and loop through the results to display the movies output.
 # TODO!
 
+# movies = Movies.where({"studio_id" => warner["id"]})
+
+# for movie in movies
+#   # query to find the studio for this movie
+#   studio = Studio.find_by({"id" => movie["studio_id"]})
+  
+#   # read the studio name from the studio row
+#   studio_name = studio["name"]
+
+#   # read the title, year_released, and rating from the movie row
+#   title = movie["title"]
+#   year_released = movie["year_released"]
+#   rating = movie["rated"]
+  
+
+#   # display a string with the contact's full name and note
+#   puts "#{title} #{rating} (#{year_released}) - #{studio_name}"
+# end
+
 # Prints a header for the cast output
 puts ""
 puts "Top Cast"
@@ -304,5 +323,5 @@ puts ""
 # Query the actor data and loop through the results to display the agent's list of represented actors output.
 # TODO!
 
-actor = Actor.find_by({"agent_id" => ari["id"]})
-puts actor["name"]
+# actor = Actor.find_by({"agent_id" => ari["id"]})
+# puts actor["name"]
